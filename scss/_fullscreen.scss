@@ -69,15 +69,13 @@
 
 			border: none;
 			font-family: $font_sec;
-			width: 215px;
-			max-width: 250px;
-			min-width: 215px;
+
 			height: 59px;
 			// padding: 10px;
 			text-align: center;
 			font-size: 0.85rem;
 			text-transform: uppercase;
-
+			width: 190px;
 			border-radius: 30px;
 			background-color: black;
 
@@ -95,13 +93,18 @@
 				margin: 0 auto 0 15%;
 				position: relative;
 				z-index: 2020;
+				white-space: nowrap;
+
+				width: min-content;
+				min-width: 100px;
+				max-width: 160px;
 			}
 			.arrow-wrapper {
 				width: 20px;
 				position: absolute;
 				transform: translate(-50%, -50%);
 				top: 50%;
-				left: 86%;
+				left: 84%;
 				transition: 0.3s all ease-in-out;
 				img {
 					width: 20px;

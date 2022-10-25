@@ -437,13 +437,11 @@
   z-index: 10100;
   border: none;
   font-family: "Gotham-bold", sans-serif;
-  width: 215px;
-  max-width: 250px;
-  min-width: 215px;
   height: 59px;
   text-align: center;
   font-size: 0.85rem;
   text-transform: uppercase;
+  width: 190px;
   border-radius: 30px;
   background-color: black;
   color: white;
@@ -467,6 +465,12 @@
   margin: 0 auto 0 15%;
   position: relative;
   z-index: 2020;
+  white-space: nowrap;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  min-width: 100px;
+  max-width: 160px;
 }
 .introPage .cont .btn .arrow-wrapper {
   width: 20px;
@@ -474,7 +478,7 @@
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   top: 50%;
-  left: 86%;
+  left: 84%;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }

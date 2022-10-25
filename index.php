@@ -1,5 +1,28 @@
+<?php 
+
+if(isset($_GET['lang'])){
+	$lang = $_GET['lang'];
+	switch ($lang){
+		case 'en':
+			$lang = $_GET['lang'];
+			break;
+		case 'fr':
+				$lang = $_GET['lang'];
+			break;
+		case 'es':
+				$lang = $_GET['lang'];
+			break;
+		default: $lang ='en';
+	}
+}else{
+	$lang = 'en';
+}
+require "text/text_".$lang.".php";
+
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang=<?php echo $lang?>>
 	<head>
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -27,25 +50,17 @@
 		<div class="introPage">
 			<div class="cont">
 				<p>
-					Ho Ho Ho! It’s the most wonderful time of the year! <br />
-					Christmas around the world is celebrated with many unique and peculiar
-					traditions. <br />
-					One such tradition comes from Catalonia, in which a cute little log
-					poops out gifts for children on Christmas Eve! <br />
-					Play a little game to meet Tió de Nadal, the Catalan Christmas Log!
-					<br />
-					He might have a special gift just for you, if you can figure out what
-					you need to do!
+					<?php echo $intr_text['text']?>
 				</p>
 				<button class="btn fullScreenBtn hide">
-					<span>Star the Game </span>
+					<span><?php echo $intr_text['btn']?></span>
 
 					<div class="arrow-wrapper">
 						<img src="assets/arrow-wh.png" alt="" />
 					</div>
 				</button>
 				<button class="btn" id="startBtn">
-					<span>Star the Game </span>
+					<span><?php echo $intr_text['btn']?></span>
 
 					<div class="arrow-wrapper">
 						<img src="assets/arrow-wh.png" alt="" />
@@ -162,7 +177,7 @@
 		</main>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.5/mobile-detect.min.js"></script>
-
+		<script src="js/messages.js"></script>
 		<script src="js/Game.js"></script>
 		<script src="js/main.js"></script>
 	</body>

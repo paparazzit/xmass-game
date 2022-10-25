@@ -26,17 +26,8 @@ function Game(opt) {
 	if (!this.name) {
 		this.name = "My friend";
 	}
-	this.logMessages = {
-		msg0: "Hola," + " I'm Catalonian Christmas log...",
-		msg1: "I'm part of some unique Christmas traditions",
-		msg2: "What you have there...",
-		msg3: "A hat, some candy, blanket...nice!",
-		capOn: "Tnx for the cap... What you have there, some candy",
-		candy: "that was nice... I'm tired now. Can I have a blanky",
-		stick: "Oh no... what you have there... a stick... put it back please",
-		sleepy: "ZZZZ",
-		finishTxt: "Ups... I made a mess under my blanket.",
-	};
+	this.logMessages = messages();
+
 	this.gameStates = {
 		placeHat: false,
 		putBlanket: false,
